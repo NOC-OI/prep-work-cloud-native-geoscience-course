@@ -12,6 +12,6 @@ It includes three episodes:
 2. Introductory xarray workflows for opening, slicing, plotting, and processing NetCDF data.
 3. Git and GitHub foundations for tracking changes, branching, and merging.
 
-The goal is to ensure all learners begin the main course with a shared baseline in command-line, Python data handling, and version control workflows.
+The goal is to ensure all learners begin the main course with a shared baseline in command-line, Python data handling (using `xarray`), and version control workflows.
 
 And it also includes a setup guide for installing the required software and Python packages.
