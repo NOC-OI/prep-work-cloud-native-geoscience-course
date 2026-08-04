@@ -662,25 +662,25 @@ and <code>data/</code> subfolders.</p>
 </div>
 <div class="section level3">
 <h3 id="install-the-environment">Install the environment<a class="anchor" aria-label="anchor" href="#install-the-environment"></a></h3>
-<p>Download the <code>environment.yaml</code> file from the lesson
-repository:</p>
+<p>Download the <a href="../files/environment.yml"><code>environment.yml</code></a> file from
+the lesson repository:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="bu">cd</span> ~/cloud-native-geoscience-course/environment</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a><span class="ex">curl</span> <span class="at">-L</span> https://raw.githubusercontent.com/NOC-OI/cloud-native-geoscience-course/refs/heads/main/episodes/files/environment.yml <span class="at">-o</span> environment.yaml</span></code></pre>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a><span class="ex">curl</span> <span class="at">-L</span> https://raw.githubusercontent.com/NOC-OI/prep-work-cloud-native-geoscience-course/refs/heads/main/episodes/files/environment.yml <span class="at">-o</span> environment.yml</span></code></pre>
 </div>
 <p>Then create the environment:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yaml</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre>
 </div>
 <p><strong>Note:* This command can take several minutes to complete,
 depending on your internet connection and computer speed.</strong></p>
 <p>This will create a new environment with all the required packages.
-The environment name is defined in the <code>environment.yaml</code>
+The environment name is defined in the <code>environment.yml</code>
 file, and it is <strong>cloud-native-geoscience-course</strong> for this
 workshop. Now activate the environment:</p>
 <div class="codewrapper sourceCode" id="cb13">
