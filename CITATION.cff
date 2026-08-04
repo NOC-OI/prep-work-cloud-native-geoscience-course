@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "Prep-work and Setup for the 'Cloud-Native Architectures and Modern Data Formats for Geoscience' course"
+message: >-
+  Please cite this lesson using the metadata from this file when referring to
+  or reusing this training material.
+type: dataset
+authors:
+  - given-names: Tobias
+    family-names: Ferreira
+    orcid: "https://orcid.org/0000-0002-0888-9751"
+    affiliation: "National Oceanography Centre"
+abstract: >-
+  A Carpentries-style prep-work and setup lesson for the course
+  "Cloud-Native Architectures and Modern Data Formats for Geoscience". The
+  prep-work covers essential foundations in shell usage, introductory xarray
+  workflows with a NetCDF sea surface temperature example, and Git/GitHub
+  collaboration basics, together with setup guidance before the main course.
+license: CC-BY-4.0
+url: "https://github.com/NOC-OI/cloud-native-geoscience-course"
+repository-code: "https://github.com/NOC-OI/cloud-native-geoscience-course"
+keywords:
+  - prep-work
+  - setup
+  - shell
+  - xarray
+  - git
+  - github
+  - geoscience
+  - the carpentries
