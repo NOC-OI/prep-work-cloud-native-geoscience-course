@@ -232,23 +232,23 @@ mkdir -p ~/cloud-native-geoscience-course/data
 
 ### Install the environment
 
-Download the `environment.yaml` file from the lesson repository:
+Download the [`environment.yml`](files/environment.yml) file from the lesson repository:
 
 ```bash
 cd ~/cloud-native-geoscience-course/environment
 
-curl -L https://raw.githubusercontent.com/NOC-OI/cloud-native-geoscience-course/refs/heads/main/episodes/files/environment.yml -o environment.yaml
+curl -L https://raw.githubusercontent.com/NOC-OI/prep-work-cloud-native-geoscience-course/refs/heads/main/episodes/files/environment.yml -o environment.yml
 ```
 
 Then create the environment:
 
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 ```
 
 **Note:* This command can take several minutes to complete, depending on your internet connection and computer speed.**
 
-This will create a new environment with all the required packages. The environment name is defined in the `environment.yaml` file, and it is **cloud-native-geoscience-course** for this workshop.
+This will create a new environment with all the required packages. The environment name is defined in the `environment.yml` file, and it is **cloud-native-geoscience-course** for this workshop.
 Now activate the environment:
 
 ```bash
