@@ -13,7 +13,7 @@ The prep-work focuses on three foundational skills:
 It also includes a setup lesson covering software installation and environment preparation required before the main course.
 
 Rendered lesson website:
-<https://noc-oi.github.io/cloud-native-geoscience-course/>
+<https://noc-oi.github.io/prep-work-cloud-native-geoscience-course/>
 
 ## Episodes
 

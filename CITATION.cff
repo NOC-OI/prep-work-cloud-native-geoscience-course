@@ -16,8 +16,8 @@ abstract: >-
   workflows with a NetCDF sea surface temperature example, and Git/GitHub
   collaboration basics, together with setup guidance before the main course.
 license: CC-BY-4.0
-url: "https://github.com/NOC-OI/cloud-native-geoscience-course"
-repository-code: "https://github.com/NOC-OI/cloud-native-geoscience-course"
+url: "https://github.com/NOC-OI/prep-work-cloud-native-geoscience-course"
+repository-code: "https://github.com/NOC-OI/prep-work-cloud-native-geoscience-course"
 keywords:
   - prep-work
   - setup
