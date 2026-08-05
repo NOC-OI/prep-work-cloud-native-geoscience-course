@@ -8,7 +8,7 @@ The prep-work focuses on three foundational skills:
 
 - shell basics for file navigation and command-line workflows
 - introductory xarray workflows using NetCDF data
-- Git and GitHub fundamentals for version control and collaboration
+- Git fundamentals for version control and collaboration
 
 It also includes a setup lesson covering software installation and environment preparation required before the main course.
 
@@ -21,7 +21,7 @@ Rendered lesson website:
 |--:|:---------|:----:|:------------|
 | 1 | [Getting Started with the Shell][episode01] | 45 | What is a shell, and why should I use it instead of only a graphical interface?<br>How do I move around directories and inspect files from the command line?<br>How do I do common file and folder operations in Bash?<br>How can I get help when I do not remember a command? |
 | 2 | [Working with data in Xarray][episode02] | 90 | How do I load data with Xarray?<br>How does Xarray index data?<br>How do I apply operations to the whole or part of an array?<br>How do I work with time series data in Xarray?<br>How do I visualise data from Xarray? |
-| 3 | [Introduction to Git and GitHub][episode03] | 75 | How do I install and configure Git on my machine?<br>Why do I need a GitHub account for collaborative workflows?<br>How do add, status, diff, and commit work together?<br>How do I inspect what changed and when?<br>How do branches help me work safely on new changes?<br>How do I merge branch work back into main? |
+| 3 | [Introduction to Git][episode03] | 75 | How do I install and configure Git on my machine?<br>Why do I need a GitHub account for collaborative workflows?<br>How do add, status, diff, and commit work together?<br>How do I inspect what changed and when?<br>How do branches help me work safely on new changes?<br>How do I merge branch work back into main? |
 
 ## Contributing
 
