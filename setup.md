@@ -102,7 +102,8 @@ You will need:
 
 - Python 3.12 or newer.
 - Conda or mamba installed.
-- At least 8 GB of RAM, with 16 GB preferred.
+- Core i5 or newer CPU, with 8 cores preferred.
+- At least 16 GB of RAM, with 32 GB preferred.
 - At least 4 GB of free disk space for the environment.
 - At least 30 GB of free disk space for the example data and for data that will be generated during the workshop.
 - A stable internet connection for downloading packages and data.

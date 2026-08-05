@@ -1,5 +1,5 @@
 ---
-title: Introduction to Git and GitHub
+title: Introduction to Git
 teaching: 45
 exercises: 30
 ---
