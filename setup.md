@@ -354,6 +354,7 @@ import shapely
 import obstore
 import eccodes
 import cfgrib
+import OceanDataStore
 
 print("numpy:", numpy.__version__)
 print("pandas:", pandas.__version__)
@@ -375,7 +376,7 @@ print("shapely:", shapely.__version__)
 print("obstore:", obstore.__version__)
 print("eccodes:", eccodes.__version__)
 print("cfgrib:", cfgrib.__version__)
-```
+print("OceanDataStore:", OceanDataStore.__version__)
 
 You should see something like:
 
@@ -400,6 +401,7 @@ shapely: 2.1.2
 obstore: 0.11.0
 eccodes: 2.48.0
 cfgrib: 0.9.15.1
+OceanDataStore: 0.3.0
 ```
 
 ## About the example data
