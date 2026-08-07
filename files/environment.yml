@@ -38,3 +38,4 @@ dependencies:
       - cubed
       - "cubed[diagnostics]"
       - cubed-xarray
+      - oceandatastore==0.3.0
