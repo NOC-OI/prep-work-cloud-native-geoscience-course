@@ -100,7 +100,7 @@ If you are joining remotely, you will install the environment on your own comput
 
 You will need:
 
-- Python 3.12 or newer.
+- Python 3.13 or newer.
 - Conda or mamba installed.
 - Core i5 or newer CPU, with 8 cores preferred.
 - At least 16 GB of RAM, with 32 GB preferred.
@@ -109,15 +109,17 @@ You will need:
 - A stable internet connection for downloading packages and data.
 - A terminal application (e.g., Terminal on macOS, Console or Terminal in Linux, or [Git Bash](https://git-scm.com/downloads) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) on Windows).
 
-I will show below the steps to install Python and conda/mamba on your own computer. If you already have a working Python 3.12 installation with conda or mamba, you can skip to the next section.
+Below I’ll explain the steps to install Python and conda/mamba on your own computer. If you already have a working Python 3.13 installation with conda or mamba, you can skip to the next section.
 
 ### Install Miniforge
 
-If Conda has not been installed on your machine, then install it. You can install the [Anaconda distribution](https://www.anaconda.com/download). This is a conda distribution that includes many scientific packages. If you install Anaconda, you will have a working Python environment with conda already installed.
+First, install Conda on your machine, if you don’t already have it. You can install the [Anaconda distribution](https://www.anaconda.com/download). This is a conda distribution that includes many scientific packages. If you install Anaconda, you will have a working Python environment with conda already installed.
 
 However, Anaconda is large and may take a long time to install.
 
 Another option is to install [Miniforge](https://conda-forge.org/download/) for your OS. As the name suggests, Miniforge is a "mini" version of the Anaconda Python distribution that includes only Conda, a Python 3 distribution, and any necessary OS-specific dependencies.
+
+If you already have Conda on your machine, you can skip this step.
 
 For convenience, here are links to the 64-bit Miniforge installers:
 
