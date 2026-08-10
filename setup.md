@@ -164,10 +164,10 @@ rm Miniforge3-$(uname)-$(uname -m).sh
 
 ### Verifying your Conda installation
 
-To verify that you have installed Conda correctly, run the `conda help` command. The output should look similar to the following.
+To verify that you have installed Conda correctly, run the `conda --help` command. The output should look similar to the following.
 
 ```bash
-$ conda help
+$ conda --help
 usage: conda [-h] [-V] command ...
 
 conda is a tool for managing and deploying applications, environments and packages.
