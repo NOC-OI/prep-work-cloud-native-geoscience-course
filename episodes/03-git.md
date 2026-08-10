@@ -262,7 +262,7 @@ Tracking changes is one of Git's biggest advantages for research and engineering
 
 This is valuable in scientific work, where you may need to explain how a figure, table, or derived dataset was produced weeks later.
 
-Show what changed between working tree and last commit:
+Show what changed between the working tree and last commit:
 
 ```bash
 git diff
