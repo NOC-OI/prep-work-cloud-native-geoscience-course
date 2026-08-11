@@ -280,6 +280,12 @@ tar -v -xzf data.tar.gz -C ~/cloud-native-geoscience-course/
 
 **Note:** The extraction process can take some time, because we are extracting a large number of files. After the process completes, you can check if the `daily_swh`, `era5_sst`, and `glorys` folders were created inside `data` folder by running `ls -lh ~/cloud-native-geoscience-course/data/`.
 
+If you already have the three folders mentioned above, you can delete the original compressed file to free up space on your computer.
+
+```bash
+rm ~/cloud-native-geoscience-course/environment/data.tar.gz
+```
+
 ### Launch Python interface
 
 To start working with Python, we need to launch a program that will interpret and execute our Python commands. In this workshop, we are working mainly in Jupyter notebooks.
