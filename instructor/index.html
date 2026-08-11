@@ -392,7 +392,7 @@ environment on your own computer.</li>
   In-person setup (JASMIN)
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>We will be using the Notebooks service on the JASMIN system for this
 workshop. This will open a Jupyter notebook in your web browser, from
@@ -480,7 +480,7 @@ when accessing the data.</p>
   Remote setup (your own computer)
   </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
 <p>If you are joining remotely, you will install the environment on your
 own computer.</p>
@@ -532,7 +532,7 @@ OSX - Apple M1/2/3 CPU</a></li>
   Windows installation
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>If you are using miniforge on Windows, after you download the <a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe" class="external-link">Windows
 installer</a>, double-click it and follow the instructions, including
@@ -551,7 +551,7 @@ variable”</strong> option.</p>
   Mac OSX or Linux installation
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>If you are using miniforge on Mac OSX or Linux, you can install it
 from the command line. First, download the 64-bit Python 3 install
@@ -718,6 +718,13 @@ completes, you can check if the <code>daily_swh</code>,
 <code>era5_sst</code>, and <code>glorys</code> folders were created
 inside <code>data</code> folder by running
 <code>ls -lh ~/cloud-native-geoscience-course/data/</code>.</p>
+<p>If you already have the three folders mentioned above, you can delete
+the original compressed file to free up space on your computer.</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="fu">rm</span> ~/cloud-native-geoscience-course/environment/data.tar.gz</span></code></pre>
+</div>
 </div>
 <div class="section level3">
 <h3 id="launch-python-interface">Launch Python interface<a class="anchor" aria-label="anchor" href="#launch-python-interface"></a></h3>
@@ -734,22 +741,22 @@ with Python. You can launch a notebook from the terminal:</p>
   Unix shell
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>Navigate to the <code>cloud-native-geoscience-course/</code>
 directory. If you’re using a Unix shell application, such as Terminal on
 macOS, Console or Terminal in Linux, or [Git Bash][gitbash] on Windows,
 execute the following command:</p>
-<div class="codewrapper sourceCode" id="cb16">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="bu">cd</span> ~/cloud-native-geoscience-course/</span></code></pre>
-</div>
-<p>To launch the Jupyter server, run:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="ex">jupyter</span> lab</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="bu">cd</span> ~/cloud-native-geoscience-course/</span></code></pre>
+</div>
+<p>To launch the Jupyter server, run:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="ex">jupyter</span> lab</span></code></pre>
 </div>
 </div>
 </div>
@@ -763,7 +770,7 @@ execute the following command:</p>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p>On Windows, you can use its native Command Prompt program. The
 easiest way to start it up is by pressing <kbd>Windows Logo
@@ -793,77 +800,77 @@ the drop-down menu:</p>
 <h3 id="test-the-installation">Test the installation<a class="anchor" aria-label="anchor" href="#test-the-installation"></a></h3>
 <p>Run the following code to check that the core packages are
 available:</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="im">import</span> numpy</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a><span class="im">import</span> pandas</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="im">import</span> xarray</span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a><span class="im">import</span> s3fs</span>
-<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a><span class="im">import</span> dask</span>
-<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a><span class="im">import</span> dask_gateway</span>
-<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a><span class="im">import</span> zarr</span>
-<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a><span class="im">import</span> netCDF4</span>
-<span id="cb20-9"><a href="#cb20-9" tabindex="-1" aria-label="code-block-20-9"></a><span class="im">import</span> matplotlib</span>
-<span id="cb20-10"><a href="#cb20-10" tabindex="-1" aria-label="code-block-20-10"></a><span class="im">import</span> cartopy</span>
-<span id="cb20-11"><a href="#cb20-11" tabindex="-1" aria-label="code-block-20-11"></a><span class="im">import</span> fsspec</span>
-<span id="cb20-12"><a href="#cb20-12" tabindex="-1" aria-label="code-block-20-12"></a><span class="im">import</span> icechunk</span>
-<span id="cb20-13"><a href="#cb20-13" tabindex="-1" aria-label="code-block-20-13"></a><span class="im">import</span> virtualizarr</span>
-<span id="cb20-14"><a href="#cb20-14" tabindex="-1" aria-label="code-block-20-14"></a><span class="im">import</span> pystac</span>
-<span id="cb20-15"><a href="#cb20-15" tabindex="-1" aria-label="code-block-20-15"></a><span class="im">import</span> topozarr</span>
-<span id="cb20-16"><a href="#cb20-16" tabindex="-1" aria-label="code-block-20-16"></a><span class="im">import</span> boto3</span>
-<span id="cb20-17"><a href="#cb20-17" tabindex="-1" aria-label="code-block-20-17"></a><span class="im">import</span> shapely</span>
-<span id="cb20-18"><a href="#cb20-18" tabindex="-1" aria-label="code-block-20-18"></a><span class="im">import</span> obstore</span>
-<span id="cb20-19"><a href="#cb20-19" tabindex="-1" aria-label="code-block-20-19"></a><span class="im">import</span> eccodes</span>
-<span id="cb20-20"><a href="#cb20-20" tabindex="-1" aria-label="code-block-20-20"></a><span class="im">import</span> cfgrib</span>
-<span id="cb20-21"><a href="#cb20-21" tabindex="-1" aria-label="code-block-20-21"></a><span class="im">import</span> OceanDataStore</span>
-<span id="cb20-22"><a href="#cb20-22" tabindex="-1" aria-label="code-block-20-22"></a></span>
-<span id="cb20-23"><a href="#cb20-23" tabindex="-1" aria-label="code-block-20-23"></a><span class="bu">print</span>(<span class="st">"numpy:"</span>, numpy.__version__)</span>
-<span id="cb20-24"><a href="#cb20-24" tabindex="-1" aria-label="code-block-20-24"></a><span class="bu">print</span>(<span class="st">"pandas:"</span>, pandas.__version__)</span>
-<span id="cb20-25"><a href="#cb20-25" tabindex="-1" aria-label="code-block-20-25"></a><span class="bu">print</span>(<span class="st">"xarray:"</span>, xarray.__version__)</span>
-<span id="cb20-26"><a href="#cb20-26" tabindex="-1" aria-label="code-block-20-26"></a><span class="bu">print</span>(<span class="st">"s3fs:"</span>, s3fs.__version__)</span>
-<span id="cb20-27"><a href="#cb20-27" tabindex="-1" aria-label="code-block-20-27"></a><span class="bu">print</span>(<span class="st">"dask:"</span>, dask.__version__)</span>
-<span id="cb20-28"><a href="#cb20-28" tabindex="-1" aria-label="code-block-20-28"></a><span class="bu">print</span>(<span class="st">"dask_gateway:"</span>, dask_gateway.__version__)</span>
-<span id="cb20-29"><a href="#cb20-29" tabindex="-1" aria-label="code-block-20-29"></a><span class="bu">print</span>(<span class="st">"zarr:"</span>, zarr.__version__)</span>
-<span id="cb20-30"><a href="#cb20-30" tabindex="-1" aria-label="code-block-20-30"></a><span class="bu">print</span>(<span class="st">"netCDF4:"</span>, netCDF4.__version__)</span>
-<span id="cb20-31"><a href="#cb20-31" tabindex="-1" aria-label="code-block-20-31"></a><span class="bu">print</span>(<span class="st">"matplotlib:"</span>, matplotlib.__version__)</span>
-<span id="cb20-32"><a href="#cb20-32" tabindex="-1" aria-label="code-block-20-32"></a><span class="bu">print</span>(<span class="st">"cartopy:"</span>, cartopy.__version__)</span>
-<span id="cb20-33"><a href="#cb20-33" tabindex="-1" aria-label="code-block-20-33"></a><span class="bu">print</span>(<span class="st">"fsspec:"</span>, fsspec.__version__)</span>
-<span id="cb20-34"><a href="#cb20-34" tabindex="-1" aria-label="code-block-20-34"></a><span class="bu">print</span>(<span class="st">"icechunk:"</span>, icechunk.__version__)</span>
-<span id="cb20-35"><a href="#cb20-35" tabindex="-1" aria-label="code-block-20-35"></a><span class="bu">print</span>(<span class="st">"virtualizarr:"</span>, virtualizarr.__version__)</span>
-<span id="cb20-36"><a href="#cb20-36" tabindex="-1" aria-label="code-block-20-36"></a><span class="bu">print</span>(<span class="st">"pystac:"</span>, pystac.__version__)</span>
-<span id="cb20-37"><a href="#cb20-37" tabindex="-1" aria-label="code-block-20-37"></a><span class="bu">print</span>(<span class="st">"topozarr:"</span>, topozarr.__version__)</span>
-<span id="cb20-38"><a href="#cb20-38" tabindex="-1" aria-label="code-block-20-38"></a><span class="bu">print</span>(<span class="st">"boto3:"</span>, boto3.__version__)</span>
-<span id="cb20-39"><a href="#cb20-39" tabindex="-1" aria-label="code-block-20-39"></a><span class="bu">print</span>(<span class="st">"shapely:"</span>, shapely.__version__)</span>
-<span id="cb20-40"><a href="#cb20-40" tabindex="-1" aria-label="code-block-20-40"></a><span class="bu">print</span>(<span class="st">"obstore:"</span>, obstore.__version__)</span>
-<span id="cb20-41"><a href="#cb20-41" tabindex="-1" aria-label="code-block-20-41"></a><span class="bu">print</span>(<span class="st">"eccodes:"</span>, eccodes.__version__)</span>
-<span id="cb20-42"><a href="#cb20-42" tabindex="-1" aria-label="code-block-20-42"></a><span class="bu">print</span>(<span class="st">"cfgrib:"</span>, cfgrib.__version__)</span>
-<span id="cb20-43"><a href="#cb20-43" tabindex="-1" aria-label="code-block-20-43"></a><span class="bu">print</span>(<span class="st">"OceanDataStore:"</span>, OceanDataStore.__version__)</span>
-<span id="cb20-44"><a href="#cb20-44" tabindex="-1" aria-label="code-block-20-44"></a></span>
-<span id="cb20-45"><a href="#cb20-45" tabindex="-1" aria-label="code-block-20-45"></a>You should see something like:</span>
-<span id="cb20-46"><a href="#cb20-46" tabindex="-1" aria-label="code-block-20-46"></a></span>
-<span id="cb20-47"><a href="#cb20-47" tabindex="-1" aria-label="code-block-20-47"></a>```output</span>
-<span id="cb20-48"><a href="#cb20-48" tabindex="-1" aria-label="code-block-20-48"></a>numpy: <span class="fl">2.4.3</span></span>
-<span id="cb20-49"><a href="#cb20-49" tabindex="-1" aria-label="code-block-20-49"></a>pandas: <span class="fl">3.0.2</span></span>
-<span id="cb20-50"><a href="#cb20-50" tabindex="-1" aria-label="code-block-20-50"></a>xarray: <span class="fl">2026.7.0</span></span>
-<span id="cb20-51"><a href="#cb20-51" tabindex="-1" aria-label="code-block-20-51"></a>s3fs: <span class="fl">2026.4.0</span></span>
-<span id="cb20-52"><a href="#cb20-52" tabindex="-1" aria-label="code-block-20-52"></a>dask: <span class="fl">2026.3.0</span></span>
-<span id="cb20-53"><a href="#cb20-53" tabindex="-1" aria-label="code-block-20-53"></a>dask_gateway: <span class="fl">2026.3.0</span></span>
-<span id="cb20-54"><a href="#cb20-54" tabindex="-1" aria-label="code-block-20-54"></a>zarr: <span class="fl">3.2.1</span></span>
-<span id="cb20-55"><a href="#cb20-55" tabindex="-1" aria-label="code-block-20-55"></a>netCDF4: <span class="fl">1.7.4</span></span>
-<span id="cb20-56"><a href="#cb20-56" tabindex="-1" aria-label="code-block-20-56"></a>matplotlib: <span class="fl">3.11.1</span></span>
-<span id="cb20-57"><a href="#cb20-57" tabindex="-1" aria-label="code-block-20-57"></a>cartopy: <span class="fl">0.25.0</span></span>
-<span id="cb20-58"><a href="#cb20-58" tabindex="-1" aria-label="code-block-20-58"></a>fsspec: <span class="fl">2026.4.0</span></span>
-<span id="cb20-59"><a href="#cb20-59" tabindex="-1" aria-label="code-block-20-59"></a>icechunk: <span class="fl">2.1.1</span></span>
-<span id="cb20-60"><a href="#cb20-60" tabindex="-1" aria-label="code-block-20-60"></a>virtualizarr: <span class="fl">2.7.1</span></span>
-<span id="cb20-61"><a href="#cb20-61" tabindex="-1" aria-label="code-block-20-61"></a>pystac: <span class="fl">1.15.2</span></span>
-<span id="cb20-62"><a href="#cb20-62" tabindex="-1" aria-label="code-block-20-62"></a>topozarr: <span class="fl">0.1.2</span></span>
-<span id="cb20-63"><a href="#cb20-63" tabindex="-1" aria-label="code-block-20-63"></a>boto3: <span class="fl">1.43.46</span></span>
-<span id="cb20-64"><a href="#cb20-64" tabindex="-1" aria-label="code-block-20-64"></a>shapely: <span class="fl">2.1.2</span></span>
-<span id="cb20-65"><a href="#cb20-65" tabindex="-1" aria-label="code-block-20-65"></a>obstore: <span class="fl">0.11.0</span></span>
-<span id="cb20-66"><a href="#cb20-66" tabindex="-1" aria-label="code-block-20-66"></a>eccodes: <span class="fl">2.48.0</span></span>
-<span id="cb20-67"><a href="#cb20-67" tabindex="-1" aria-label="code-block-20-67"></a>cfgrib: <span class="fl">0.9.15.1</span></span>
-<span id="cb20-68"><a href="#cb20-68" tabindex="-1" aria-label="code-block-20-68"></a>OceanDataStore: <span class="fl">0.3.0</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="im">import</span> numpy</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a><span class="im">import</span> pandas</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="im">import</span> xarray</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a><span class="im">import</span> s3fs</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a><span class="im">import</span> dask</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a><span class="im">import</span> dask_gateway</span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="im">import</span> zarr</span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a><span class="im">import</span> netCDF4</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a><span class="im">import</span> matplotlib</span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a><span class="im">import</span> cartopy</span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a><span class="im">import</span> fsspec</span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1" aria-label="code-block-21-12"></a><span class="im">import</span> icechunk</span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a><span class="im">import</span> virtualizarr</span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a><span class="im">import</span> pystac</span>
+<span id="cb21-15"><a href="#cb21-15" tabindex="-1" aria-label="code-block-21-15"></a><span class="im">import</span> topozarr</span>
+<span id="cb21-16"><a href="#cb21-16" tabindex="-1" aria-label="code-block-21-16"></a><span class="im">import</span> boto3</span>
+<span id="cb21-17"><a href="#cb21-17" tabindex="-1" aria-label="code-block-21-17"></a><span class="im">import</span> shapely</span>
+<span id="cb21-18"><a href="#cb21-18" tabindex="-1" aria-label="code-block-21-18"></a><span class="im">import</span> obstore</span>
+<span id="cb21-19"><a href="#cb21-19" tabindex="-1" aria-label="code-block-21-19"></a><span class="im">import</span> eccodes</span>
+<span id="cb21-20"><a href="#cb21-20" tabindex="-1" aria-label="code-block-21-20"></a><span class="im">import</span> cfgrib</span>
+<span id="cb21-21"><a href="#cb21-21" tabindex="-1" aria-label="code-block-21-21"></a><span class="im">import</span> OceanDataStore</span>
+<span id="cb21-22"><a href="#cb21-22" tabindex="-1" aria-label="code-block-21-22"></a></span>
+<span id="cb21-23"><a href="#cb21-23" tabindex="-1" aria-label="code-block-21-23"></a><span class="bu">print</span>(<span class="st">"numpy:"</span>, numpy.__version__)</span>
+<span id="cb21-24"><a href="#cb21-24" tabindex="-1" aria-label="code-block-21-24"></a><span class="bu">print</span>(<span class="st">"pandas:"</span>, pandas.__version__)</span>
+<span id="cb21-25"><a href="#cb21-25" tabindex="-1" aria-label="code-block-21-25"></a><span class="bu">print</span>(<span class="st">"xarray:"</span>, xarray.__version__)</span>
+<span id="cb21-26"><a href="#cb21-26" tabindex="-1" aria-label="code-block-21-26"></a><span class="bu">print</span>(<span class="st">"s3fs:"</span>, s3fs.__version__)</span>
+<span id="cb21-27"><a href="#cb21-27" tabindex="-1" aria-label="code-block-21-27"></a><span class="bu">print</span>(<span class="st">"dask:"</span>, dask.__version__)</span>
+<span id="cb21-28"><a href="#cb21-28" tabindex="-1" aria-label="code-block-21-28"></a><span class="bu">print</span>(<span class="st">"dask_gateway:"</span>, dask_gateway.__version__)</span>
+<span id="cb21-29"><a href="#cb21-29" tabindex="-1" aria-label="code-block-21-29"></a><span class="bu">print</span>(<span class="st">"zarr:"</span>, zarr.__version__)</span>
+<span id="cb21-30"><a href="#cb21-30" tabindex="-1" aria-label="code-block-21-30"></a><span class="bu">print</span>(<span class="st">"netCDF4:"</span>, netCDF4.__version__)</span>
+<span id="cb21-31"><a href="#cb21-31" tabindex="-1" aria-label="code-block-21-31"></a><span class="bu">print</span>(<span class="st">"matplotlib:"</span>, matplotlib.__version__)</span>
+<span id="cb21-32"><a href="#cb21-32" tabindex="-1" aria-label="code-block-21-32"></a><span class="bu">print</span>(<span class="st">"cartopy:"</span>, cartopy.__version__)</span>
+<span id="cb21-33"><a href="#cb21-33" tabindex="-1" aria-label="code-block-21-33"></a><span class="bu">print</span>(<span class="st">"fsspec:"</span>, fsspec.__version__)</span>
+<span id="cb21-34"><a href="#cb21-34" tabindex="-1" aria-label="code-block-21-34"></a><span class="bu">print</span>(<span class="st">"icechunk:"</span>, icechunk.__version__)</span>
+<span id="cb21-35"><a href="#cb21-35" tabindex="-1" aria-label="code-block-21-35"></a><span class="bu">print</span>(<span class="st">"virtualizarr:"</span>, virtualizarr.__version__)</span>
+<span id="cb21-36"><a href="#cb21-36" tabindex="-1" aria-label="code-block-21-36"></a><span class="bu">print</span>(<span class="st">"pystac:"</span>, pystac.__version__)</span>
+<span id="cb21-37"><a href="#cb21-37" tabindex="-1" aria-label="code-block-21-37"></a><span class="bu">print</span>(<span class="st">"topozarr:"</span>, topozarr.__version__)</span>
+<span id="cb21-38"><a href="#cb21-38" tabindex="-1" aria-label="code-block-21-38"></a><span class="bu">print</span>(<span class="st">"boto3:"</span>, boto3.__version__)</span>
+<span id="cb21-39"><a href="#cb21-39" tabindex="-1" aria-label="code-block-21-39"></a><span class="bu">print</span>(<span class="st">"shapely:"</span>, shapely.__version__)</span>
+<span id="cb21-40"><a href="#cb21-40" tabindex="-1" aria-label="code-block-21-40"></a><span class="bu">print</span>(<span class="st">"obstore:"</span>, obstore.__version__)</span>
+<span id="cb21-41"><a href="#cb21-41" tabindex="-1" aria-label="code-block-21-41"></a><span class="bu">print</span>(<span class="st">"eccodes:"</span>, eccodes.__version__)</span>
+<span id="cb21-42"><a href="#cb21-42" tabindex="-1" aria-label="code-block-21-42"></a><span class="bu">print</span>(<span class="st">"cfgrib:"</span>, cfgrib.__version__)</span>
+<span id="cb21-43"><a href="#cb21-43" tabindex="-1" aria-label="code-block-21-43"></a><span class="bu">print</span>(<span class="st">"OceanDataStore:"</span>, OceanDataStore.__version__)</span>
+<span id="cb21-44"><a href="#cb21-44" tabindex="-1" aria-label="code-block-21-44"></a></span>
+<span id="cb21-45"><a href="#cb21-45" tabindex="-1" aria-label="code-block-21-45"></a>You should see something like:</span>
+<span id="cb21-46"><a href="#cb21-46" tabindex="-1" aria-label="code-block-21-46"></a></span>
+<span id="cb21-47"><a href="#cb21-47" tabindex="-1" aria-label="code-block-21-47"></a>```output</span>
+<span id="cb21-48"><a href="#cb21-48" tabindex="-1" aria-label="code-block-21-48"></a>numpy: <span class="fl">2.4.3</span></span>
+<span id="cb21-49"><a href="#cb21-49" tabindex="-1" aria-label="code-block-21-49"></a>pandas: <span class="fl">3.0.2</span></span>
+<span id="cb21-50"><a href="#cb21-50" tabindex="-1" aria-label="code-block-21-50"></a>xarray: <span class="fl">2026.7.0</span></span>
+<span id="cb21-51"><a href="#cb21-51" tabindex="-1" aria-label="code-block-21-51"></a>s3fs: <span class="fl">2026.4.0</span></span>
+<span id="cb21-52"><a href="#cb21-52" tabindex="-1" aria-label="code-block-21-52"></a>dask: <span class="fl">2026.3.0</span></span>
+<span id="cb21-53"><a href="#cb21-53" tabindex="-1" aria-label="code-block-21-53"></a>dask_gateway: <span class="fl">2026.3.0</span></span>
+<span id="cb21-54"><a href="#cb21-54" tabindex="-1" aria-label="code-block-21-54"></a>zarr: <span class="fl">3.2.1</span></span>
+<span id="cb21-55"><a href="#cb21-55" tabindex="-1" aria-label="code-block-21-55"></a>netCDF4: <span class="fl">1.7.4</span></span>
+<span id="cb21-56"><a href="#cb21-56" tabindex="-1" aria-label="code-block-21-56"></a>matplotlib: <span class="fl">3.11.1</span></span>
+<span id="cb21-57"><a href="#cb21-57" tabindex="-1" aria-label="code-block-21-57"></a>cartopy: <span class="fl">0.25.0</span></span>
+<span id="cb21-58"><a href="#cb21-58" tabindex="-1" aria-label="code-block-21-58"></a>fsspec: <span class="fl">2026.4.0</span></span>
+<span id="cb21-59"><a href="#cb21-59" tabindex="-1" aria-label="code-block-21-59"></a>icechunk: <span class="fl">2.1.1</span></span>
+<span id="cb21-60"><a href="#cb21-60" tabindex="-1" aria-label="code-block-21-60"></a>virtualizarr: <span class="fl">2.7.1</span></span>
+<span id="cb21-61"><a href="#cb21-61" tabindex="-1" aria-label="code-block-21-61"></a>pystac: <span class="fl">1.15.2</span></span>
+<span id="cb21-62"><a href="#cb21-62" tabindex="-1" aria-label="code-block-21-62"></a>topozarr: <span class="fl">0.1.2</span></span>
+<span id="cb21-63"><a href="#cb21-63" tabindex="-1" aria-label="code-block-21-63"></a>boto3: <span class="fl">1.43.46</span></span>
+<span id="cb21-64"><a href="#cb21-64" tabindex="-1" aria-label="code-block-21-64"></a>shapely: <span class="fl">2.1.2</span></span>
+<span id="cb21-65"><a href="#cb21-65" tabindex="-1" aria-label="code-block-21-65"></a>obstore: <span class="fl">0.11.0</span></span>
+<span id="cb21-66"><a href="#cb21-66" tabindex="-1" aria-label="code-block-21-66"></a>eccodes: <span class="fl">2.48.0</span></span>
+<span id="cb21-67"><a href="#cb21-67" tabindex="-1" aria-label="code-block-21-67"></a>cfgrib: <span class="fl">0.9.15.1</span></span>
+<span id="cb21-68"><a href="#cb21-68" tabindex="-1" aria-label="code-block-21-68"></a>OceanDataStore: <span class="fl">0.3.0</span></span></code></pre>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="about-the-example-data">About the example data<a class="anchor" aria-label="anchor" href="#about-the-example-data"></a></h2>
