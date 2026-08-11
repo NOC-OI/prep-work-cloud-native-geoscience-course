@@ -275,10 +275,10 @@ Download the zip file from the lesson repository, then unzip it into your `cloud
 
 ```bash
 curl -L https://atlantis-vis-o.s3-ext.jc.rl.ac.uk/cloud-native-geoscience-course/cloud-native-geoscience-course-data.tar.gz -o data.tar.gz
-tar -xzf data.tar.gz -C ~/cloud-native-geoscience-course/data/
+tar -v -xzf data.tar.gz -C ~/cloud-native-geoscience-course/
 ```
 
-**Note:** The extraction process can take some time, because we are extracting a large number of files. You can check the progress by running `ls -lh ~/cloud-native-geoscience-course/data/` in another terminal window.
+**Note:** The extraction process can take some time, because we are extracting a large number of files. After the process completes, you can check if the `daily_swh`, `era5_sst`, and `glorys` folders were created inside `data` folder by running `ls -lh ~/cloud-native-geoscience-course/data/`.
 
 ### Launch Python interface
 
