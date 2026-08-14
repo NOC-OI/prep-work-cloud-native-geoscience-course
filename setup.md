@@ -329,9 +329,9 @@ python -m jupyter lab
 :::::::::::::::::::::::::
 
 ### Access the notebooks
-Once the Jupyter server is running, it will open a new tab in your web browser showing the notebook dashboard. Launch the notebook by clicking on the "New" button on the right and selecting "Python 3" from the drop-down menu:
+Once the Jupyter server is running, it will open a new tab in your web browser showing the notebook dashboard. Launch the notebook by clicking on the "Python 3 (ipykernel)" button on the "Notebook" session, not in the "Console" or "Other":
 
-![](fig/jupyter-notebook-launch-notebook2.png){alt='Anaconda Navigator Notebook directory'}
+![](fig/jupyter-lab-lauch-page.png){alt='Anaconda Navigator Notebook directory'}
 
 
 :::::::::::::::::::::::::
