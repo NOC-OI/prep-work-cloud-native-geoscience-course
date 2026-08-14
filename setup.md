@@ -385,6 +385,7 @@ print("obstore:", obstore.__version__)
 print("eccodes:", eccodes.__version__)
 print("cfgrib:", cfgrib.__version__)
 print("OceanDataStore:", OceanDataStore.__version__)
+```
 
 You should see something like:
 
