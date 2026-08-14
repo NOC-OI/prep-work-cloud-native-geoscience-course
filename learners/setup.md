@@ -274,8 +274,8 @@ The full example data is about 20 GB, so make sure you have enough free disk spa
 Download the zip file from the lesson repository, then unzip it into your `cloud-native-geoscience-course/data/` folder:
 
 ```bash
-curl -L https://atlantis-vis-o.s3-ext.jc.rl.ac.uk/cloud-native-geoscience-course/cloud-native-geoscience-course-data.tar.gz -o data.tar.gz
-tar -v -xzf data.tar.gz -C ~/cloud-native-geoscience-course/
+curl -L https://atlantis-vis-o.s3-ext.jc.rl.ac.uk/cloud-native-geoscience-course/cloud-native-geoscience-course-data.tar.gz -o ~/cloud-native-geoscience-course/data.tar.gz
+tar -v -xzf ~/cloud-native-geoscience-course/data.tar.gz -C ~/cloud-native-geoscience-course/
 ```
 
 **Note:** The extraction process can take some time, because we are extracting a large number of files. After the process completes, you can check if the `daily_swh`, `era5_sst`, and `glorys` folders were created inside `data` folder by running `ls -lh ~/cloud-native-geoscience-course/data/`.
@@ -283,7 +283,7 @@ tar -v -xzf data.tar.gz -C ~/cloud-native-geoscience-course/
 If you already have the three folders mentioned above, you can delete the original compressed file to free up space on your computer.
 
 ```bash
-rm ~/cloud-native-geoscience-course/environment/data.tar.gz
+rm ~/cloud-native-geoscience-course/data.tar.gz
 ```
 
 ### Launch Python interface
