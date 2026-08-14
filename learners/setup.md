@@ -249,7 +249,9 @@ Then create the environment:
 conda env create -f environment.yml
 ```
 
-**Note:* This command can take several minutes to complete, depending on your internet connection and computer speed.**
+**Note1: This command can take several minutes to complete, depending on your internet connection and computer speed.**
+
+**Note2: For Windows users that are using git bash, they reported problems with the library `tree` inside the environment.yml file. If you had problems with this library while creating the environment, try removing it from the environment.yml file and then create the environment again.**
 
 This will create a new environment with all the required packages. The environment name is defined in the `environment.yml` file, and it is **cloud-native-geoscience-course** for this workshop.
 Now activate the environment:
