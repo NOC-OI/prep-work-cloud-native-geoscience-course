@@ -346,10 +346,15 @@ Apply NumPy functions:
 ```python
 import numpy as np
 
-dataset_clipped = xr.apply_ufunc(np.clip, dataset["sst"], -2, 2)
+dataset_clipped = xr.apply_ufunc(np.clip, dataset["sst"], 282, 291)
 ```
 
-`np.clip` limits all values to a fixed range. This can help control outliers before plotting or statistics.
+`np.clip` limits all values to a fixed range. This can help control outliers before plotting or statistics. We can see below the impact of applying the function to our SST results.
+
+```python
+dataset["sst"].sel(valid_time="2025-01-01T00:00:00").plot() # original data
+dataset_clipped.sel(valid_time="2025-01-01 00:00").plot() # clipped data
+```
 
 ### Reduce operations
 
