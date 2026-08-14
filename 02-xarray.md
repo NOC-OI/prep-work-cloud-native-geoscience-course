@@ -174,6 +174,10 @@ For label-based slices with `sel`, remember:
 - The slice endpoints are coordinate labels.
 - The stop label is usually included when present.
 
+On the other hand, for standard Python slicing syntax:
+
+- The stop index is usually NOT included in the slice.
+
 Slice by labels:
 
 ```python
@@ -188,7 +192,7 @@ dataset["sst"].sel(valid_time=slice("2025-01-01", "2025-01-02")).values
 
 This will return a NumPy array of the sea surface temperature values for the specified time range.
 
-Use `.values` only when you really need a NumPy array.
+Use `.values` only when you really need a NumPy array, which is rare, because we can do data operations using `DataArray`.
 Keeping data as Xarray objects preserves coordinate labels and metadata, which is often useful for later steps.
 
 ::::::::::::::::::::::::::::::::::::::: challenge
