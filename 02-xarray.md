@@ -114,7 +114,7 @@ print(dataset["sst"])
 
 As you can see, the `sst` variable has dimensions of `valid_time`, `latitude`, and `longitude`.
 
-`dataset["sst"]` is usually the safest style because it is explicit and still works when variable names are not valid Python identifiers.
+`dataset["sst"]` is usually the safest style because it is explicit and still works when variable names are not valid Python identifiers, i.e., when it has special characters or space.
 
 Access dimensions and elements:
 
@@ -123,7 +123,7 @@ print(dataset["sst"]["valid_time"]) # prints the valid_time coordinate
 print(dataset["sst"]["valid_time"][0]) # prints the first valid_time value
 ```
 
-You can also use dot-style access to retrieve variables:
+You can also use dot-style access to retrieve variables that have valid Python identifiers, as mentioned above:
 
 ```python
 print(dataset.sst)
