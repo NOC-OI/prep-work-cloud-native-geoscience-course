@@ -299,7 +299,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Working with data in Xarray</h1>
-        <p>Last updated on 2026-08-04 |
+        <p>Last updated on 2026-08-14 |
 
         <a href="https://github.com/noc-oi/prep-work-cloud-native-geoscience-course/edit/main/episodes/02-xarray.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -442,7 +442,7 @@ as time and latitude).</li>
 <code>longitude</code>.</p>
 <p><code>dataset["sst"]</code> is usually the safest style because it is
 explicit and still works when variable names are not valid Python
-identifiers.</p>
+identifiers, i.e., when it has special characters or space.</p>
 <p>Access dimensions and elements:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -450,7 +450,8 @@ identifiers.</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="bu">print</span>(dataset[<span class="st">"sst"</span>][<span class="st">"valid_time"</span>]) <span class="co"># prints the valid_time coordinate</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="bu">print</span>(dataset[<span class="st">"sst"</span>][<span class="st">"valid_time"</span>][<span class="dv">0</span>]) <span class="co"># prints the first valid_time value</span></span></code></pre>
 </div>
-<p>You can also use dot-style access to retrieve variables:</p>
+<p>You can also use dot-style access to retrieve variables that have
+valid Python identifiers, as mentioned above:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1072,7 +1073,7 @@ any links that you are not going to use.
   "url": "https://noc-oi.github.io/prep-work-cloud-native-geoscience-course/instructor/02-xarray.html",
   "identifier": "https://noc-oi.github.io/prep-work-cloud-native-geoscience-course/instructor/02-xarray.html",
   "dateCreated": "2026-07-01",
-  "dateModified": "2026-08-04",
+  "dateModified": "2026-08-14",
   "datePublished": "2026-08-14"
 }
 
