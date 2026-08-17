@@ -326,13 +326,25 @@ git add notes.txt
 git commit -m "Add branch-specific update"
 ```
 
+Lets verify history now:
+
+```bash
+git log --oneline --decorate
+```
+
+The history differentiate the modification done only in the improve-notes branch
+
 Switch back to main:
 
 ```bash
 git switch main
 ```
 
-At this point, `main` does not yet include branch-only commits until you merge.
+At this point, `main` does not yet include branch-only commits until you merge. We can confirm this by running `git log` again.
+
+```bash
+git log --oneline --decorate
+```
 
 This separation is intentional: it allows testing and review before integration.
 
