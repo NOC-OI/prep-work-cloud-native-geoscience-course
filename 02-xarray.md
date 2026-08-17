@@ -466,7 +466,7 @@ Apply a reducer and compare against original data:
 ```python
 import matplotlib.pyplot as plt
 
-dataset["sst"].sel(latitude=53, longitude=330, method="nearest").plot(label="Original Data")
+dataset["sst"].sel(latitude=53, longitude=330, method="nearest").plot(label="Original Data", marker='x')
 resampled.mean().plot(label="Resampled Daily Data", marker="o")
 plt.legend()
 ```
@@ -477,6 +477,7 @@ plt.legend()
 grouped = dataset["sst"].sel(latitude=53, longitude=330, method="nearest").groupby("valid_time.day")
 grouped_mean = grouped.mean()
 plt.bar(grouped_mean.day, grouped_mean)
+plt.ylim(280, 282)
 ```
 
 `groupby` splits data into groups based on coordinate-derived labels, then applies operations per group.
@@ -487,8 +488,8 @@ plt.bar(grouped_mean.day, grouped_mean)
 rolling = dataset["sst"].rolling(valid_time=12, center=True)
 ds_rolling = rolling.mean()
 
-dataset.sst.sel(longitude=330, latitude=53, method="nearest").plot(label="SST")
-ds_rolling.sel(longitude=330, latitude=53, method="nearest").plot(label="12-step rolling mean")
+dataset.sst.sel(longitude=330, latitude=53, method="nearest").plot(label="Original Data", marker='x')
+ds_rolling.sel(longitude=330, latitude=53, method="nearest").plot(label="12-step rolling mean", marker='.')
 plt.legend()
 ```
 
@@ -511,8 +512,9 @@ Temporal coarsening:
 
 ```python
 coarse = dataset.coarsen(valid_time=12)
-coarse.mean()["sst"].sel(latitude=53, longitude=330, method="nearest").plot()
-dataset["sst"].sel(latitude=53, longitude=330, method="nearest").plot()
+coarse.mean()["sst"].sel(latitude=53, longitude=330, method="nearest").plot(label="Coarse Data", marker='.')
+dataset["sst"].sel(latitude=53, longitude=330, method="nearest").plot(label="Original Data", marker='x')
+plt.legend()
 ```
 
 ## Writing data
