@@ -389,13 +389,19 @@ Note that this dataset uses longitudes in degrees East (0 to 360), so West longi
 
 ### Conditionally selecting and replacing data
 
-Mask negatives to NaN:
+Mask temperatures under 282 Kelvin to NaN:
 
 ```python
-dataset["sst"].where(dataset["sst"] >= 0.0)
+masked_sst = dataset["sst"].where(dataset["sst"] >= 282)
 ```
 
-`where` keeps values where the condition is `True` and sets other values to `NaN` (unless `other=` is provided).
+`where(cond, other)` keeps values where `cond` is `True` and sets other values to `NaN` (unless we define another substitute value in `other=`). We can visually check this behavior by comparing the two plots below:
+
+```python
+dataset["sst"].sel(valid_time="2025-01-01T00:00:00").plot()
+
+masked_sst.sel(valid_time="2025-01-01T00:00:00").plot()
+```
 
 Conditional replacement with `xr.where`:
 
