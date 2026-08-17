@@ -848,7 +848,7 @@ values until you call an aggregation like <code>.mean()</code>.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" tabindex="-1" aria-label="code-block-36-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb36-2"><a href="#cb36-2" tabindex="-1" aria-label="code-block-36-2"></a></span>
-<span id="cb36-3"><a href="#cb36-3" tabindex="-1" aria-label="code-block-36-3"></a>dataset[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"Original Data"</span>)</span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1" aria-label="code-block-36-3"></a>dataset[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"Original Data"</span>, marker<span class="op">=</span><span class="st">'x'</span>)</span>
 <span id="cb36-4"><a href="#cb36-4" tabindex="-1" aria-label="code-block-36-4"></a>resampled.mean().plot(label<span class="op">=</span><span class="st">"Resampled Daily Data"</span>, marker<span class="op">=</span><span class="st">"o"</span>)</span>
 <span id="cb36-5"><a href="#cb36-5" tabindex="-1" aria-label="code-block-36-5"></a>plt.legend()</span></code></pre>
 </div>
@@ -860,7 +860,8 @@ values until you call an aggregation like <code>.mean()</code>.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" tabindex="-1" aria-label="code-block-37-1"></a>grouped <span class="op">=</span> dataset[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).groupby(<span class="st">"valid_time.day"</span>)</span>
 <span id="cb37-2"><a href="#cb37-2" tabindex="-1" aria-label="code-block-37-2"></a>grouped_mean <span class="op">=</span> grouped.mean()</span>
-<span id="cb37-3"><a href="#cb37-3" tabindex="-1" aria-label="code-block-37-3"></a>plt.bar(grouped_mean.day, grouped_mean)</span></code></pre>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1" aria-label="code-block-37-3"></a>plt.bar(grouped_mean.day, grouped_mean)</span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1" aria-label="code-block-37-4"></a>plt.ylim(<span class="dv">280</span>, <span class="dv">282</span>)</span></code></pre>
 </div>
 <p><code>groupby</code> splits data into groups based on
 coordinate-derived labels, then applies operations per group.</p>
@@ -873,8 +874,8 @@ coordinate-derived labels, then applies operations per group.</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" tabindex="-1" aria-label="code-block-38-1"></a>rolling <span class="op">=</span> dataset[<span class="st">"sst"</span>].rolling(valid_time<span class="op">=</span><span class="dv">12</span>, center<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb38-2"><a href="#cb38-2" tabindex="-1" aria-label="code-block-38-2"></a>ds_rolling <span class="op">=</span> rolling.mean()</span>
 <span id="cb38-3"><a href="#cb38-3" tabindex="-1" aria-label="code-block-38-3"></a></span>
-<span id="cb38-4"><a href="#cb38-4" tabindex="-1" aria-label="code-block-38-4"></a>dataset.sst.sel(longitude<span class="op">=</span><span class="dv">330</span>, latitude<span class="op">=</span><span class="dv">53</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"SST"</span>)</span>
-<span id="cb38-5"><a href="#cb38-5" tabindex="-1" aria-label="code-block-38-5"></a>ds_rolling.sel(longitude<span class="op">=</span><span class="dv">330</span>, latitude<span class="op">=</span><span class="dv">53</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"12-step rolling mean"</span>)</span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1" aria-label="code-block-38-4"></a>dataset.sst.sel(longitude<span class="op">=</span><span class="dv">330</span>, latitude<span class="op">=</span><span class="dv">53</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"Original Data"</span>, marker<span class="op">=</span><span class="st">'x'</span>)</span>
+<span id="cb38-5"><a href="#cb38-5" tabindex="-1" aria-label="code-block-38-5"></a>ds_rolling.sel(longitude<span class="op">=</span><span class="dv">330</span>, latitude<span class="op">=</span><span class="dv">53</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"12-step rolling mean"</span>, marker<span class="op">=</span><span class="st">'.'</span>)</span>
 <span id="cb38-6"><a href="#cb38-6" tabindex="-1" aria-label="code-block-38-6"></a>plt.legend()</span></code></pre>
 </div>
 <p>Rolling operations smooth short-term variability and highlight
@@ -898,8 +899,9 @@ leftover cells that do not fill a complete window.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" tabindex="-1" aria-label="code-block-40-1"></a>coarse <span class="op">=</span> dataset.coarsen(valid_time<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb40-2"><a href="#cb40-2" tabindex="-1" aria-label="code-block-40-2"></a>coarse.mean()[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot()</span>
-<span id="cb40-3"><a href="#cb40-3" tabindex="-1" aria-label="code-block-40-3"></a>dataset[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot()</span></code></pre>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1" aria-label="code-block-40-2"></a>coarse.mean()[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"Coarse Data"</span>, marker<span class="op">=</span><span class="st">'.'</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1" aria-label="code-block-40-3"></a>dataset[<span class="st">"sst"</span>].sel(latitude<span class="op">=</span><span class="dv">53</span>, longitude<span class="op">=</span><span class="dv">330</span>, method<span class="op">=</span><span class="st">"nearest"</span>).plot(label<span class="op">=</span><span class="st">"Original Data"</span>, marker<span class="op">=</span><span class="st">'x'</span>)</span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1" aria-label="code-block-40-4"></a>plt.legend()</span></code></pre>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="writing-data">Writing data<a class="anchor" aria-label="anchor" href="#writing-data"></a></h2>
