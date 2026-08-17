@@ -283,7 +283,10 @@ git show
 ```
 
 By default, `git show` displays the most recent commit and its exact patch.
-You can also show a specific commit with:
+You can also show a specific commit by passing its commit-id to the `git show` command.
+The commit-id is a unique 40-character hexadecimal string that acts as a digital fingerprint of each commit.
+We can check this by running `git log`.
+`git show` also accepts an alias of the complete commit-id that is composed by its first six characters.
 
 ```bash
 git show <commit-id>
