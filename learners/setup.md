@@ -81,10 +81,10 @@ In-person participants will use a shared JASMIN group workspace for the example 
 Please run the following command in a terminal on the JASMIN notebook service to check that you can access the data:
 
 ```bash
-ls /gws/ssde/j25b/atlantis_vis/cloud-native-geoscience-course/
+ls /gws/ssde/j25b/atlantis_vis/cloud-native-geoscience-course/data/
 ```
 
-If you see a folder called `data`, you have access to the example data. If you see an error, please ask for help.
+If you see the folders `daily_swh`, `era5_sst` and `glorys`, you have access to the example data. If you see an error, please ask for help.
 
 During the course, remember to use the full path `/gws/ssde/j25b/atlantis_vis/cloud-native-geoscience-course/` when accessing the data.
 
