@@ -47,11 +47,11 @@ A preconfigured Conda environment is available for use: `cloud-native-geoscience
 
 Since the environment is stored in a non-standard location (`/work/scratch-nopw2/tobfer/cloud-native-geoscience-course-env`), Jupyter will not detect it automatically. Follow these steps to set it up:
 
-- Open a Terminal.
+- Open a Terminal in the JASMIN Jupyter Hub:
 
-From the Jupyter launcher, click the Terminal icon.
+In the Jupyter launcher, click the Terminal icon.
 
-- Register the `cloud-native-geoscience-course` kernel.
+- Register the `cloud-native-geoscience-course` kernel:
 
 Run the following command:
 
